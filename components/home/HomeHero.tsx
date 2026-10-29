@@ -1,19 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import Container from "@/components/layout/Container";
 
 export default function HomeHero() {
-  const shouldReduceMotion = useReducedMotion();
-
-  const entrance = shouldReduceMotion
-    ? {}
-    : {
-        initial: { opacity: 0, y: 20 },
-        animate: { opacity: 1, y: 0 },
-      };
+  const entrance = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+  };
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-background)]">
@@ -25,11 +21,11 @@ export default function HomeHero() {
             className="max-w-2xl"
           >
             <p className="mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)] sm:text-sm">
-              Mbote & Associates Advocates
+              Mbote &amp; Associates Advocates
             </p>
 
             <h1 className="font-serif text-4xl font-medium leading-[1.12] tracking-tight text-[var(--color-primary)] sm:text-5xl lg:text-6xl">
-              Legal counsel grounded in professionalism and integrity.
+              Strategic, Efficient &amp; Appropriate Legal Services
             </h1>
 
             <p className="mt-7 max-w-xl text-base leading-8 text-[var(--color-muted)] sm:text-lg">
@@ -55,7 +51,7 @@ export default function HomeHero() {
           </motion.div>
 
           <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.98 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
             className="relative"
@@ -79,7 +75,7 @@ export default function HomeHero() {
                 </p>
 
                 <p className="mt-5 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-muted)]">
-                  Mbote & Associates Advocates
+                  Mbote &amp; Associates Advocates
                 </p>
               </div>
             </div>

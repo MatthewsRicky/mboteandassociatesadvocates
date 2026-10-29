@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { firm } from "@/data/firm";
 import Container from "@/components/layout/Container";
+import Image from "next/image";
 
 const navigation = [
   { label: "Home", href: "/" },
@@ -21,12 +22,22 @@ export default function Header() {
             aria-label={`${firm.name} homepage`}
             className="min-w-0"
           >
-            <span className="block font-serif text-xl font-semibold tracking-tight text-[var(--color-primary)] sm:text-2xl">
-              Mbote & Associates
-            </span>
-            <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--color-muted)] sm:text-xs">
-              Advocates
-            </span>
+            <div className="flex gap-6">
+              <Image
+                src={"/brand/logo.png"}
+                alt="Company Logo"
+                width={60}
+                height={20}
+              />
+              <div className="flex flex-col">
+                <span className="block font-serif text-xl font-semibold tracking-tight text-[var(--color-primary)] sm:text-2xl">
+                  Mbote & Associates
+                </span>
+                <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--color-muted)] sm:text-xs">
+                  Advocates
+                </span>
+              </div>
+            </div>
           </Link>
 
           <nav

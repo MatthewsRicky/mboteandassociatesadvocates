@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import HomeHero from "@/components/home/HomeHero";
+import PracticeAreasSection from "@/components/practice-areas/PracticeAreasSection";
+import AboutPreview from "@/components/about/AboutPreview";
+import TrustBanner from "@/components/home/TrustBanner";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -16,6 +19,8 @@ export default function HomePage() {
   return (
     <>
       <HomeHero />
+      <AboutPreview />
+      <PracticeAreasSection />
 
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-3xl px-5 text-center sm:px-8">
@@ -40,6 +45,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+      <TrustBanner />
     </>
   );
 }
