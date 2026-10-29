@@ -1,0 +1,78 @@
+mbote-advocates/
+├── app/
+│   ├── about/
+│   │   └── page.tsx
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts
+│   ├── contact/
+│   │   └── page.tsx
+│   ├── insights/
+│   │   ├── [slug]/
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── practice-areas/
+│   │   ├── [slug]/
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── privacy-policy/
+│   │   └── page.tsx
+│   ├── team/
+│   │   ├── [slug]/
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── not-found.tsx
+│   ├── page.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+├── components/
+│   ├── about/
+│   ├── contact/
+│   ├── home/
+│   ├── insights/
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── MobileNav.tsx
+│   │   └── Container.tsx
+│   ├── practice-areas/
+│   ├── shared/
+│   │   ├── Button.tsx
+│   │   ├── PageHero.tsx
+│   │   ├── SectionHeading.tsx
+│   │   └── SectionCTA.tsx
+│   └── team/
+├── data/
+│   ├── firm.ts
+│   ├── navigation.ts
+│   ├── practice-areas.ts
+│   ├── team.ts
+│   └── insights.ts
+├── lib/
+│   ├── utils.ts
+│   ├── validations/
+│   │   └── contact.ts
+│   └── email/
+│       └── send-contact-email.ts
+├── types/
+│   ├── article.ts
+│   ├── practice-area.ts
+│   └── team-member.ts
+├── public/
+│   ├── images/
+│   │   ├── brand/
+│   │   ├── hero/
+│   │   ├── team/
+│   │   ├── practice-areas/
+│   │   └── insights/
+│   └── icons/
+├── .env.example
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── README.md
