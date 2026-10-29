@@ -27,7 +27,7 @@ export default function Header() {
 
           <nav
             aria-label="Main navigation"
-            className="hidden items-center gap-6 lg:flex lg:gap-8"
+            className="hidden items-center gap-6 md:flex lg:gap-8"
           >
             {primaryNavigation.map((item) =>
               item.children?.length ? (
@@ -44,7 +44,7 @@ export default function Header() {
             )}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <Link
               href="/contact"
               className="inline-flex min-h-11 items-center justify-center bg-[var(--color-primary)] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[var(--color-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"

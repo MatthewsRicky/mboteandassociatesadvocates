@@ -30,12 +30,9 @@ export const primaryNavigation: readonly NavigationItem[] = [
     label: "Practice Areas",
     href: "/practice-areas",
   },
+
   {
-    label: "Our Team",
-    href: "/team",
-  },
-  {
-    label: "Insights",
-    href: "/insights",
+    label: "Media",
+    href: "/media",
   },
 ];

@@ -1,6 +1,3 @@
-import Link from "next/link";
-
-import type { PracticeArea } from "@/data/practice-areas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faScaleBalanced,
@@ -12,6 +9,8 @@ import {
   faFileInvoiceDollar,
   faComments,
 } from "@fortawesome/free-solid-svg-icons";
+
+import type { PracticeArea } from "@/data/practice-areas";
 
 const icons = {
   "fa-scale-balanced": faScaleBalanced,
@@ -33,62 +32,48 @@ export default function PracticeAreaCard({
   practiceArea,
   index,
 }: PracticeAreaCardProps) {
+  const icon = icons[practiceArea.icon as keyof typeof icons];
+
   return (
-    <article className="group flex h-full flex-col border border-[var(--color-border)] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)] hover:shadow-lg sm:p-7">
+    <article className="group flex h-full flex-col border border-[var(--color-border)] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)] hover:shadow-xl sm:p-9 lg:p-10">
       <div className="flex items-start justify-between gap-4">
-        <div className="flex size-12 shrink-0 items-center justify-center border border-[var(--color-border)] bg-[var(--color-background)] transition-colors duration-300 group-hover:border-[var(--color-accent)]">
+        <div className="flex size-16 shrink-0 items-center justify-center border border-[var(--color-border)] bg-[var(--color-background)] transition-colors duration-300 group-hover:border-[var(--color-accent)] sm:size-[72px]">
           <FontAwesomeIcon
-            icon={icons[practiceArea.icon as keyof typeof icons]}
+            icon={icon}
             aria-hidden="true"
-            className="size-6 text-[var(--color-accent)]"
+            className="size-7 text-[var(--color-accent)] sm:size-8"
           />
         </div>
 
-        <span className="font-serif text-sm text-[var(--color-accent)]">
+        <span className="font-serif text-base text-[var(--color-accent)]">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>
 
-      <h3 className="mt-6 font-serif text-xl font-medium leading-snug text-[var(--color-primary)] sm:text-2xl">
+      <h2 className="mt-7 font-serif text-2xl font-medium leading-snug text-[var(--color-primary)] sm:mt-8 sm:text-3xl">
         {practiceArea.title}
-      </h3>
+      </h2>
 
-      <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">
+      <p className="mt-4 text-base leading-8 text-[var(--color-muted)]">
         {practiceArea.shortDescription}
       </p>
 
       {practiceArea.services.length > 0 && (
-        <ul className="mt-5 space-y-2 border-t border-[var(--color-border)] pt-4">
+        <ul className="mt-7 space-y-3 border-t border-[var(--color-border)] pt-6">
           {practiceArea.services.map((service) => (
             <li
               key={service}
-              className="flex items-start gap-2 text-sm leading-6 text-[var(--color-text)]"
+              className="flex items-start gap-3 text-sm leading-7 text-[var(--color-text)] sm:text-base"
             >
               <span
                 aria-hidden="true"
-                className="mt-[9px] size-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
+                className="mt-3 size-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
               />
               <span>{service}</span>
             </li>
           ))}
         </ul>
       )}
-
-      <div className="mt-auto pt-7">
-        <Link
-          href={`/practice-areas/${practiceArea.slug}`}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] transition-colors group-hover:text-[var(--color-accent)]"
-          aria-label={`Learn more about ${practiceArea.title}`}
-        >
-          Explore service
-          <span
-            aria-hidden="true"
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          >
-            →
-          </span>
-        </Link>
-      </div>
     </article>
   );
 }
