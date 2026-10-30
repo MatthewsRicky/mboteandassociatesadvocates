@@ -46,7 +46,7 @@ export default function AboutDropdown() {
         aria-expanded={isOpen}
         aria-controls="desktop-about-dropdown"
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+        className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
       >
         About
         <ChevronDown

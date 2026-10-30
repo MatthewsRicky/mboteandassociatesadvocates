@@ -27,59 +27,17 @@ export default function Footer() {
               className="flex items-center gap-3 font-serif text-2xl font-semibold tracking-tight"
             >
               <Image
-              src={"/brand/logo.png"}
-              alt="Main Company Logo"
-              width={60}
-              height={20} 
+                src={"/brand/logo.png"}
+                alt="Main Company Logo"
+                width={60}
+                height={20}
               />
               {firm.shortName} Advocates
-              
             </Link>
-
-            
 
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/75">
               {firm.description}
             </p>
-          </div>
-          <div className="flex flex-col gap-5 text-sm leading-7 text-white/70">
-            <h1 className="uppercase text-white font-semibold">
-              Location and Contact
-            </h1>
-            <div className="flex gap-2 items-center">
-              <span>
-                <HomeIcon />
-              </span>
-              <p className="wrap">
-                Mum’s Plaza 1st Floor Rm No 16, Along Corner Beach Road,
-                (Opposite Family Bank),
-                P O Box 1435-80400, Diani.
-              </p>
-            </div>
-            <div className="flex gap-2 items-center">
-              <span>
-                <PhoneCallIcon />
-              </span>
-              <p>Phone: (254)739 430 649</p>
-            </div>
-            <div className="flex gap-2 items-center">
-              <span>
-                <PhoneCallIcon />
-              </span>
-              <p>Phone: (254) 726 076 741</p>
-            </div>
-            <div className="flex gap-2 items-center">
-              <span>
-                <MessageCircleCheckIcon />
-              </span>
-              <p>info@mboteadvocates.co.ke</p>
-            </div>
-            <div className="flex gap-2 items-center">
-              <span>
-                <Globe2Icon />
-              </span>
-              <p>www.mboteadvocates.co.ke</p>
-            </div>
           </div>
 
           <div>
@@ -103,8 +61,46 @@ export default function Footer() {
             </nav>
           </div>
         </div>
+        <div className="flex flex-col gap-5 text-sm leading-7 text-white/70">
+          <h1 className="uppercase text-white font-semibold">
+            Location and Contact
+          </h1>
+          <div className="flex gap-2 items-center">
+            <span>
+              <HomeIcon />
+            </span>
+            <p className="wrap">
+              Mum’s Plaza 1st Floor Rm No 16, Along Corner Beach Road, (Opposite
+              Family Bank), P O Box 1435-80400, Diani.
+            </p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <span>
+              <PhoneCallIcon />
+            </span>
+            <p>Phone: (254)739 430 649</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <span>
+              <PhoneCallIcon />
+            </span>
+            <p>Phone: (254) 726 076 741</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <span>
+              <MessageCircleCheckIcon />
+            </span>
+            <p>info@mboteadvocates.co.ke</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <span>
+              <Globe2Icon />
+            </span>
+            <p>www.mboteadvocates.co.ke</p>
+          </div>
+        </div>
 
-        <div className="border-t border-white/15 py-5">
+        <div className="border-t my-2 border-white/15 py-5">
           <p className="text-xs leading-6 text-white/65">
             © {currentYear} {firm.name}. All rights reserved.
           </p>
