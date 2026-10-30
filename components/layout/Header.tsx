@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 import AboutDropdown from "@/components/layout/AboutDropdown";
 import Container from "@/components/layout/Container";
 import MobileNav from "@/components/layout/MobileNav";
@@ -14,15 +14,23 @@ export default function Header() {
           <Link
             href="/"
             aria-label={`${firm.shortName} — Home`}
-            className="shrink-0"
+            className="shrink-0 flex gap-5"
           >
-            <span className="block font-serif text-xl font-semibold tracking-tight text-[var(--color-primary)] sm:text-2xl">
-              {firm.shortName}
-            </span>
+            <Image
+            src={"/brand/logo.png"}
+            alt="Main Company Logo"
+            width={60}
+            height={20} 
+            />
+            <div>
+              <span className="block font-serif text-xl font-semibold tracking-tight text-[var(--color-primary)] sm:text-2xl">
+                {firm.shortName}
+              </span>
 
-            <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--color-muted)]">
-              Advocates
-            </span>
+              <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--color-muted)]">
+                Advocates
+              </span>
+            </div>
           </Link>
 
           <nav
