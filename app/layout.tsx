@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import { firm } from "@/data/firm";
 
 export const metadata: Metadata = {
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <WhatsAppButton />
         </div>
       </body>
     </html>
